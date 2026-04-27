@@ -38,7 +38,6 @@
                     <a href="#workshops" class="text-gray-600 hover:text-blue-600 font-medium transition">Workshops</a>
                     <a href="#projects" class="text-gray-600 hover:text-blue-600 font-medium transition">Academic Projects</a>
                     <a href="examples.html" class="text-gray-600 hover:text-blue-600 font-medium transition">Inspiring AI Examples 🚀</a>
-                    
                     <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition shadow-md">
                         Register Now
                     </a>
@@ -130,12 +129,20 @@
 
     <section id="workshops" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Live Workshops</h2>
-                <p class="mt-4 text-lg text-gray-500">Interactive 3-day online bootcamps culminating in a mini-competition.</p>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Start Your Journey</h2>
+                
+                <div class="inline-flex bg-gray-200 rounded-full p-1 relative shadow-inner">
+                    <button id="tab-workshops" onclick="switchTab('workshops')" class="w-48 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-white shadow text-blue-600">
+                        Live Workshops
+                    </button>
+                    <button id="tab-demo" onclick="switchTab('demo')" class="w-48 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-gray-500 hover:text-gray-800">
+                        Free Demo Class
+                    </button>
+                </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div id="content-workshops" class="grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300">
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 hover:shadow-md transition">
                     <div class="inline-block px-4 py-1 rounded-full bg-green-100 text-green-800 font-semibold text-sm mb-4">Class 7 - 10</div>
                     <h3 class="text-xl md:text-2xl font-bold mb-3">Junior Innovators Batch</h3>
@@ -158,6 +165,21 @@
                     </ul>
                 </div>
             </div>
+
+            <div id="content-demo" class="hidden transition-opacity duration-300">
+                <div class="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-sm border border-blue-100 p-8 md:p-12 text-center">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-lg">🎥</div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Not sure where to start?</h3>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+                        Join our upcoming free 60-minute weekend demo. Get a sneak peek into our teaching style, write your first lines of AI code live, and ask all your questions in a dedicated Q&A session.
+                    </p>
+                    <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg">
+                        Book Free Demo Pass
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500 font-medium">* Limited to 50 students per session</p>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -188,6 +210,38 @@
             <p class="text-sm text-gray-400">&copy; 2026 LearnAI Workshops. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function switchTab(tabName) {
+            const tabWorkshops = document.getElementById('tab-workshops');
+            const tabDemo = document.getElementById('tab-demo');
+            const contentWorkshops = document.getElementById('content-workshops');
+            const contentDemo = document.getElementById('content-demo');
+
+            if (tabName === 'workshops') {
+                contentWorkshops.classList.remove('hidden');
+                contentWorkshops.classList.add('grid');
+                contentDemo.classList.add('hidden');
+
+                tabWorkshops.classList.add('bg-white', 'shadow', 'text-blue-600');
+                tabWorkshops.classList.remove('text-gray-500', 'hover:text-gray-800');
+
+                tabDemo.classList.remove('bg-white', 'shadow', 'text-blue-600');
+                tabDemo.classList.add('text-gray-500', 'hover:text-gray-800');
+                
+            } else if (tabName === 'demo') {
+                contentDemo.classList.remove('hidden');
+                contentWorkshops.classList.add('hidden');
+                contentWorkshops.classList.remove('grid');
+
+                tabDemo.classList.add('bg-white', 'shadow', 'text-blue-600');
+                tabDemo.classList.remove('text-gray-500', 'hover:text-gray-800');
+
+                tabWorkshops.classList.remove('bg-white', 'shadow', 'text-blue-600');
+                tabWorkshops.classList.add('text-gray-500', 'hover:text-gray-800');
+            }
+        }
+    </script>
 
 </body>
 </html>
