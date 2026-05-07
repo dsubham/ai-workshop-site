@@ -2,202 +2,276 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AI & Data Science Workshops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnAI - Future-Proof Your Career</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#5aa368',
+                            purple: '#66328b',
+                            dark: '#2d1b46',
+                            light: '#f8f9fa'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #fafbfc;
         }
-        .gradient-text {
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(to right, #2563eb, #7c3aed);
+        .pattern-dots {
+            background-image: radial-gradient(#d1d5db 2px, transparent 2px);
+            background-size: 16px 16px;
+        }
+        .hero-image-shape {
+            border-radius: 2rem 8rem 2rem 8rem;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="text-gray-800 antialiased font-sans">
 
-    <nav class="bg-white shadow-sm fixed w-full z-10 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold tracking-tighter text-gray-900">Learn<span class="text-blue-600">AI</span></a>
-                </div>
-                
-                <div class="md:hidden flex items-center">
-                    <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-blue-700 transition shadow-md">
-                        Register
-                    </a>
-                </div>
+    <nav class="bg-white border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center gap-5">
+            <span class="text-3xl font-extrabold tracking-tight text-gray-900">Learn<span class="text-gray-400">AI</span></span>
+            <div class="h-10 w-px bg-gray-300"></div>
+            <img src="AIIQ-MINDS-LOGO.png" alt="AIIQ MINDS Logo" class="h-12 object-contain">
+        </div>
+        
+        <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-600">
+            <a href="#workshops" class="hover:text-brand-purple transition">Workshops</a>
+            <a href="#projects" class="hover:text-brand-purple transition">Academic Projects</a>
+            <a href="examples.html" class="hover:text-brand-purple transition">Inspiring AI Examples 🚀</a>
+        </div>
 
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#workshops" class="text-gray-600 hover:text-blue-600 font-medium transition">Workshops</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600 font-medium transition">Academic Projects</a>
-                    <a href="examples.html" class="text-gray-600 hover:text-blue-600 font-medium transition">Inspiring AI Examples 🚀</a>
-                    <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition shadow-md">
-                        Register Now
-                    </a>
-                </div>
-            </div>
+        <div>
+            <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="bg-gradient-to-r from-brand-green to-brand-purple text-white px-6 py-2.5 rounded-md font-semibold text-sm hover:opacity-90 transition shadow-md">
+                Register Now
+            </a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                Future-Proof Your Career with <br>
-                <span class="gradient-text">Applied AI & Coding</span>
+    <section class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative overflow-hidden">
+        <div class="absolute top-0 right-1/2 w-64 h-64 bg-brand-light rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10 transform translate-x-1/2"></div>
+
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
+                Future-Proof <br> Your Career with <br>
+                <span class="text-brand-green">Applied</span> <span class="text-brand-purple">AI & Coding</span>
             </h1>
-            <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-500 mx-auto mb-10 px-2">
+            
+            <div class="h-1.5 w-20 bg-gradient-to-r from-brand-green to-brand-purple rounded-full mb-6"></div>
+
+            <p class="text-gray-600 text-lg mb-10 max-w-md leading-relaxed">
                 Hands-on, project-based bootcamps for Class 7 to Undergraduates. Build real-world applications and learn the exact methodologies used by top tech teams.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 px-4">
-                <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg text-center">
-                    Register Now
+
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="bg-brand-purple text-white px-8 py-3.5 rounded-full font-semibold flex items-center justify-center gap-3 hover:bg-[#532973] transition shadow-lg w-full sm:w-fit">
+                    Register Now 
+                    <span class="bg-white text-brand-purple rounded-full w-6 h-6 flex items-center justify-center text-xs">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
                 </a>
-                <a href="#workshops" class="w-full sm:w-auto bg-gray-100 text-gray-800 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-200 transition text-center">
-                    Explore Programs
+                <a href="#workshops" class="bg-white border-2 border-brand-purple text-brand-purple px-8 py-3.5 rounded-full font-semibold flex items-center justify-center gap-3 hover:bg-gray-50 transition w-full sm:w-fit">
+                    Explore Programs 
+                    <i class="fas fa-arrow-down"></i>
                 </a>
             </div>
+        </div>
 
-            <div class="mt-16 relative max-w-5xl mx-auto">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Students learning AI collaboratively" class="rounded-2xl shadow-2xl w-full object-cover h-64 md:h-[400px]">
+        <div class="relative z-10 flex justify-center lg:justify-end mt-10 lg:mt-0">
+            <div class="absolute -top-6 -left-6 w-24 h-24 pattern-dots opacity-50 z-0"></div>
+            <div class="absolute -bottom-10 right-0 w-32 h-32 pattern-dots opacity-50 z-0"></div>
+
+            <div class="relative z-10">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students learning" class="w-full max-w-lg object-cover h-[450px] hero-image-shape shadow-2xl">
+                
+                <div class="absolute -bottom-12 right-12 bg-white rounded-full p-4 shadow-[0_10px_40px_rgba(0,0,0,0.1)] flex items-center justify-center w-40 h-40 border-[6px] border-white z-20">
+                    <img src="AIIQ-MINDS-LOGO.png" alt="AIIQ MINDS" class="w-28 object-contain">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-10 bg-gray-900 text-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p class="text-xs md:text-sm font-semibold tracking-wide text-gray-400 uppercase mb-6">Master Industry-Standard Tools</p>
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-16 opacity-80">
-                <div class="text-white text-xl md:text-2xl font-bold tracking-wider">PYTHON</div>
-                <div class="text-white text-xl md:text-2xl font-bold tracking-wider">SQL</div>
-                <div class="text-white text-xl md:text-2xl font-bold tracking-wider">TABLEAU</div>
-                <div class="text-white text-xl md:text-2xl font-bold tracking-wider">GITHUB</div>
-                <div class="text-white text-xl md:text-2xl font-bold tracking-wider">GOOGLE CLOUD</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">What Will You Learn?</h2>
-                <p class="mt-4 text-lg text-gray-500">Essential skills to thrive in a technology-driven future.</p>
-            </div>
+    <section class="max-w-6xl mx-auto px-6 md:px-12 py-10 relative z-20">
+        <div class="bg-brand-dark rounded-[2.5rem] p-8 md:p-10 shadow-xl">
+            <h3 class="text-brand-green text-center text-sm font-bold tracking-[0.2em] uppercase mb-8">
+                Master Industry-Standard Tools
+            </h3>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-2 hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">💻</div>
-                    <h3 class="text-lg font-bold mb-3 text-gray-900">Learn How to Code</h3>
-                    <p class="text-gray-600 text-sm">Master fundamental programming concepts and logical problem solving step-by-step.</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-white text-center divide-x-0 md:divide-x md:divide-white/20">
+                <div class="flex flex-col items-center gap-4">
+                    <i class="fab fa-python text-5xl text-brand-green"></i>
+                    <span class="text-sm font-semibold tracking-wider">PYTHON</span>
                 </div>
-                
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-2 hover:shadow-lg transition duration-300">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">🤖</div>
-                    <h3 class="text-lg font-bold mb-3 text-gray-900">Learn Generative AI</h3>
-                    <p class="text-gray-600 text-sm">Understand large language models, prompt engineering, and build your own smart bots.</p>
+                <div class="flex flex-col items-center gap-4">
+                    <i class="fas fa-database text-5xl text-brand-green"></i>
+                    <span class="text-sm font-semibold tracking-wider">SQL</span>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-2 hover:shadow-lg transition duration-300">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">🚀</div>
-                    <h3 class="text-lg font-bold mb-3 text-gray-900">Prepare for Hackathons</h3>
-                    <p class="text-gray-600 text-sm">Gain the rapid prototyping skills necessary to collaborate and win coding competitions.</p>
+                <div class="flex flex-col items-center gap-4">
+                    <div class="grid grid-cols-3 gap-1 w-12 h-12">
+                        <div class="bg-white rounded-sm h-full w-full"></div>
+                        <div class="bg-white rounded-sm h-3/4 w-full mt-auto"></div>
+                        <div class="bg-white rounded-sm h-1/2 w-full mt-auto"></div>
+                        <div class="bg-white rounded-sm h-full w-full"></div>
+                        <div class="bg-white rounded-sm h-full w-full"></div>
+                        <div class="bg-white rounded-sm h-1/4 w-full mt-auto"></div>
+                    </div>
+                    <span class="text-sm font-semibold tracking-wider">TABLEAU</span>
                 </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center hover:-translate-y-2 hover:shadow-lg transition duration-300">
-                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">🎓</div>
-                    <h3 class="text-lg font-bold mb-3 text-gray-900">Ace Academic Projects</h3>
-                    <p class="text-gray-600 text-sm">Build standout projects that impress teachers and boost college applications.</p>
+                <div class="flex flex-col items-center gap-4">
+                    <i class="fab fa-github text-5xl text-white"></i>
+                    <span class="text-sm font-semibold tracking-wider">GITHUB</span>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <i class="fas fa-cloud text-5xl text-white"></i>
+                    <span class="text-sm font-semibold tracking-wider">GOOGLE CLOUD</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="max-w-5xl mx-auto px-6 sm:px-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6">Learn from Industry Leaders</h2>
-            <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Our curriculum is designed and taught by an <strong>IIT Kanpur alumnus</strong> and current <strong>Data Science Manager</strong>. With over 7 years of professional experience building scalable analytical models and mentoring tech talent, students receive practical, insider knowledge that bridges the gap between academic theory and industry demands.
-            </p>
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-16 bg-[#fafbfc]">
+        <div class="text-center mb-14">
+            <h2 class="text-4xl font-bold text-gray-900 mb-3">
+                What <span class="text-brand-green">Will</span> <span class="text-brand-purple">You Learn?</span>
+            </h2>
+            <p class="text-gray-500">Essential skills to thrive in a technology-driven future.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:-translate-y-1 transition duration-300">
+                <div class="w-16 h-16 rounded-2xl bg-[#f0f8f2] text-brand-green flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 text-lg mb-3">Learn How to Code</h4>
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    Master fundamental programming concepts and logical problem solving step-by-step.
+                </p>
+                <div class="w-10 h-1 bg-brand-green rounded-full mt-6"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:-translate-y-1 transition duration-300">
+                <div class="w-16 h-16 rounded-2xl bg-[#f5f0f9] text-brand-purple flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 text-lg mb-3">Understand AI</h4>
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    Dive into Machine Learning and Deep Learning with real-world applications and case studies.
+                </p>
+                <div class="w-10 h-1 bg-brand-purple rounded-full mt-6"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:-translate-y-1 transition duration-300">
+                <div class="w-16 h-16 rounded-2xl bg-[#f0f8f2] text-brand-green flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 text-lg mb-3">Work with Real Data</h4>
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    Learn to collect, clean, analyze and visualize data to extract powerful insights.
+                </p>
+                <div class="w-10 h-1 bg-brand-green rounded-full mt-6"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 hover:-translate-y-1 transition duration-300">
+                <div class="w-16 h-16 rounded-2xl bg-[#f5f0f9] text-brand-purple flex items-center justify-center text-2xl mb-6">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h4 class="font-bold text-gray-900 text-lg mb-3">Build Real Projects</h4>
+                <p class="text-gray-500 text-sm leading-relaxed flex-grow">
+                    Build an impressive portfolio of AI and data science projects from scratch.
+                </p>
+                <div class="w-10 h-1 bg-brand-purple rounded-full mt-6"></div>
+            </div>
         </div>
     </section>
 
-    <section id="workshops" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="workshops" class="py-16 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
             <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">Start Your Journey</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Start Your Journey</h2>
                 
-                <div class="inline-flex bg-gray-200 rounded-full p-1 relative shadow-inner">
-                    <button id="tab-workshops" onclick="switchTab('workshops')" class="w-48 py-2.5 rounded-full font-bold text-sm transition-all duration-300 bg-white shadow text-blue-600">
+                <div class="inline-flex bg-gray-100 rounded-full p-1 relative shadow-inner">
+                    <button id="tab-workshops" onclick="switchTab('workshops')" class="w-48 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 bg-white shadow text-brand-purple">
                         Live Workshops
                     </button>
-                    <button id="tab-demo" onclick="switchTab('demo')" class="w-48 py-2.5 rounded-full font-bold text-sm transition-all duration-300 text-gray-500 hover:text-gray-800">
+                    <button id="tab-demo" onclick="switchTab('demo')" class="w-48 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 text-gray-500 hover:text-gray-800">
                         Free Demo Class
                     </button>
                 </div>
             </div>
             
             <div id="content-workshops" class="grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300">
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 hover:shadow-md transition">
-                    <div class="inline-block px-4 py-1 rounded-full bg-green-100 text-green-800 font-semibold text-sm mb-4">Class 7 - 10</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3">Junior Innovators Batch</h3>
-                    <p class="text-gray-600 mb-6 text-sm md:text-base">Discover the magic of AI. A visual, highly engaging introduction to Python programming, prompt engineering, and building fun interactive bots.</p>
-                    <ul class="space-y-3 text-gray-600 mb-8 text-sm md:text-base">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Zero coding experience required</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Browser-based learning (No installations)</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Capstone mini-project</li>
+                <div class="bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 p-8 hover:-translate-y-1 transition duration-300">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-[#f0f8f2] text-brand-green font-semibold text-xs tracking-wider uppercase mb-5">Class 7 - 10</div>
+                    <h3 class="text-2xl font-bold mb-3">Junior Innovators Batch</h3>
+                    <p class="text-gray-500 mb-6 text-sm leading-relaxed">Discover the magic of AI. A visual, highly engaging introduction to Python programming, prompt engineering, and building fun interactive bots.</p>
+                    <ul class="space-y-4 text-gray-600 mb-8 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-green mr-3 mt-0.5"></i> Zero coding experience required</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-green mr-3 mt-0.5"></i> Browser-based learning (No installations)</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-green mr-3 mt-0.5"></i> Capstone mini-project</li>
                     </ul>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 hover:shadow-md transition">
-                    <div class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-800 font-semibold text-sm mb-4">Class 11 - Undergrad</div>
-                    <h3 class="text-xl md:text-2xl font-bold mb-3">Senior Tech Readiness</h3>
-                    <p class="text-gray-600 mb-6 text-sm md:text-base">Deep dive into the architecture of modern AI. Learn core Python, API integrations, data manipulation with SQL, and building deployable applications.</p>
-                    <ul class="space-y-3 text-gray-600 mb-8 text-sm md:text-base">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Hands-on with LLMs & Data Pipelines</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Real-world analytics frameworks</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Industry-mentored final project</li>
+                <div class="bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 p-8 hover:-translate-y-1 transition duration-300">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-[#f5f0f9] text-brand-purple font-semibold text-xs tracking-wider uppercase mb-5">Class 11 - Undergrad</div>
+                    <h3 class="text-2xl font-bold mb-3">Senior Tech Readiness</h3>
+                    <p class="text-gray-500 mb-6 text-sm leading-relaxed">Deep dive into the architecture of modern AI. Learn core Python, API integrations, data manipulation with SQL, and building deployable applications.</p>
+                    <ul class="space-y-4 text-gray-600 mb-8 text-sm">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-purple mr-3 mt-0.5"></i> Hands-on with LLMs & Data Pipelines</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-purple mr-3 mt-0.5"></i> Real-world analytics frameworks</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-brand-purple mr-3 mt-0.5"></i> Industry-mentored final project</li>
                     </ul>
                 </div>
             </div>
 
             <div id="content-demo" class="hidden transition-opacity duration-300">
-                <div class="max-w-3xl mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-sm border border-blue-100 p-8 md:p-12 text-center">
-                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-lg">🎥</div>
+                <div class="max-w-3xl mx-auto rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-[#f5f0f9] bg-gradient-to-b from-white to-[#fcfafc] p-10 md:p-14 text-center">
+                    <div class="bg-[#f5f0f9] text-brand-purple w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl shadow-sm">
+                        <i class="fas fa-video"></i>
+                    </div>
                     <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Not sure where to start?</h3>
-                    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+                    <p class="text-lg text-gray-500 mb-8 max-w-xl mx-auto leading-relaxed">
                         Join our upcoming free 60-minute weekend demo. Get a sneak peek into our teaching style, write your first lines of AI code live, and ask all your questions in a dedicated Q&A session.
                     </p>
-                    <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-lg">
+                    <a href="https://forms.gle/eqKMP3nQGbGtVoWF9" target="_blank" class="inline-block bg-brand-purple text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#532973] transition shadow-lg">
                         Book Free Demo Pass
                     </a>
-                    <p class="mt-4 text-sm text-gray-500 font-medium">* Limited to 50 students per session</p>
+                    <p class="mt-5 text-sm text-gray-400 font-medium tracking-wide uppercase">* Limited to 50 students per session</p>
                 </div>
             </div>
             
         </div>
     </section>
 
-    <section id="projects" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-blue-600 rounded-3xl overflow-hidden shadow-xl">
-                <div class="px-6 py-12 md:p-16 text-center lg:text-left lg:flex lg:items-center lg:justify-between">
+    <section id="projects" class="py-16 bg-[#fafbfc]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="bg-brand-dark rounded-[2.5rem] overflow-hidden shadow-2xl relative">
+                <div class="absolute inset-0 pattern-dots opacity-10"></div>
+                
+                <div class="px-8 py-14 md:p-16 text-center lg:text-left lg:flex lg:items-center lg:justify-between relative z-10">
                     <div class="lg:w-2/3">
-                        <h2 class="text-2xl font-extrabold text-white sm:text-4xl mb-4">
+                        <h2 class="text-3xl font-bold text-white sm:text-4xl mb-4">
                             Academic Projects Mentorship
                         </h2>
-                        <p class="text-base sm:text-lg text-blue-100 max-w-2xl mx-auto lg:mx-0">
+                        <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                             Need guidance on your final year thesis or a complex data science portfolio project? Get 1-on-1 mentorship to architect, build, and deploy end-to-end solutions using Python, SQL, and Tableau. Stand out in your job interviews with production-grade code.
                         </p>
                     </div>
-                    <div class="mt-8 lg:mt-0 lg:w-1/3 flex justify-center lg:justify-end">
-                        <a href="https://forms.gle/RimAQXRdAAnVxKui7" target="_blank" class="w-full sm:w-auto bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition shadow-lg text-center">
-                            Request Mentorship
+                    <div class="mt-10 lg:mt-0 lg:w-1/3 flex justify-center lg:justify-end">
+                        <a href="https://forms.gle/RimAQXRdAAnVxKui7" target="_blank" class="w-full sm:w-auto bg-white text-brand-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg text-center flex items-center justify-center gap-3">
+                            Request Mentorship <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -205,9 +279,12 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-sm text-gray-400">&copy; 2026 LearnAI Workshops. All rights reserved.</p>
+    <footer class="bg-white py-8 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-xl font-bold tracking-tight text-gray-900">Learn<span class="text-gray-400">AI</span></span>
+            </div>
+            <p class="text-sm text-gray-400 font-medium">&copy; 2026 LearnAI Workshops. All rights reserved.</p>
         </div>
     </footer>
 
@@ -223,10 +300,10 @@
                 contentWorkshops.classList.add('grid');
                 contentDemo.classList.add('hidden');
 
-                tabWorkshops.classList.add('bg-white', 'shadow', 'text-blue-600');
+                tabWorkshops.classList.add('bg-white', 'shadow', 'text-brand-purple');
                 tabWorkshops.classList.remove('text-gray-500', 'hover:text-gray-800');
 
-                tabDemo.classList.remove('bg-white', 'shadow', 'text-blue-600');
+                tabDemo.classList.remove('bg-white', 'shadow', 'text-brand-purple');
                 tabDemo.classList.add('text-gray-500', 'hover:text-gray-800');
                 
             } else if (tabName === 'demo') {
@@ -234,10 +311,10 @@
                 contentWorkshops.classList.add('hidden');
                 contentWorkshops.classList.remove('grid');
 
-                tabDemo.classList.add('bg-white', 'shadow', 'text-blue-600');
+                tabDemo.classList.add('bg-white', 'shadow', 'text-brand-purple');
                 tabDemo.classList.remove('text-gray-500', 'hover:text-gray-800');
 
-                tabWorkshops.classList.remove('bg-white', 'shadow', 'text-blue-600');
+                tabWorkshops.classList.remove('bg-white', 'shadow', 'text-brand-purple');
                 tabWorkshops.classList.add('text-gray-500', 'hover:text-gray-800');
             }
         }
